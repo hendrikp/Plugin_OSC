@@ -4,6 +4,8 @@ OSC - Open Sound Control Protocol integration for CryEngine
 
 For redistribution please see license.txt.
 
+This plugin relies on [oscpkt](http://gruntthepeon.free.fr/oscpkt) a very lightweight OSC implementation.
+
 Installation / Integration
 ==========================
 Extract the files to your Cryengine SDK Folder so that the Code and BinXX/Plugins directory match up.
