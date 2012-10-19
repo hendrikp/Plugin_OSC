@@ -86,7 +86,7 @@ namespace OSCPlugin
 * @brief This function is required to use the Autoregister Flownode without modification.
 */
 inline void GameWarning( const char* sFormat, ... ) PRINTF_PARAMS( 1, 2 );
-inline void GameWarning(const char * sFormat, ...)
+inline void GameWarning( const char* sFormat, ... )
 {
     va_list ArgList;
     va_start( ArgList, sFormat );

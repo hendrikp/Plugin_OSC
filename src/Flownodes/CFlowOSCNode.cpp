@@ -344,7 +344,7 @@ namespace OSCPlugin
 
                 return;
 WrongType:
-                gPlugin->LogWarning("message %s received unexpected type", m_sMessage.c_str() );
+                gPlugin->LogWarning( "message %s received unexpected type", m_sMessage.c_str() );
             };
 
             void Release()
