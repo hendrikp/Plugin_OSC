@@ -14,25 +14,32 @@ namespace OSCPlugin
 
     CPluginOSC::~CPluginOSC()
     {
+        Release( true );
+
         gPlugin = NULL;
     }
 
     bool CPluginOSC::Release( bool bForce )
     {
-        // Should be called while Game is still active otherwise there might be leaks/problems
-        bool bRet = CPluginBase::Release( bForce );
+        bool bRet = true;
 
-        if ( bRet )
+        if ( !m_bCanUnload )
         {
-            // Depending on your plugin you might not want to unregister anything
-            // if the System is quitting.
-            // if(gEnv && gEnv->pSystem && !gEnv->pSystem->IsQuitting()) {
+            // Should be called while Game is still active otherwise there might be leaks/problems
+            bRet = CPluginBase::Release( bForce );
 
-            // Cleanup like this always (since the class is static its cleaned up when the dll is unloaded)
-            gPluginManager->UnloadPlugin( GetName() );
+            if ( bRet )
+            {
+                // Depending on your plugin you might not want to unregister anything
+                // if the System is quitting.
+                // if(gEnv && gEnv->pSystem && !gEnv->pSystem->IsQuitting()) {
 
-            // Allow Plugin Manager garbage collector to unload this plugin
-            AllowDllUnload();
+                // Cleanup like this always (since the class is static its cleaned up when the dll is unloaded)
+                gPluginManager->UnloadPlugin( GetName() );
+
+                // Allow Plugin Manager garbage collector to unload this plugin
+                AllowDllUnload();
+            }
         }
 
         return bRet;
