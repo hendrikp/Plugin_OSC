@@ -41,12 +41,12 @@ Connection
 
 Receiving Data (UDP Server)
 ---------------------------
-* ```OSC_Plugin:Receive:Message``` Registers a Message that can be received
+* ```OSC_Plugin:Receive:Message``` Registers a message that can be received
   * In ```Init``` Registers the message with the connected ```Connection```
   * In ```sMessage``` Messagetext/identifier/path
   * Out ```InitNext``` connect the first ```Receive:Value:*``` of this message (the order is important)
 
-* ```OSC_Plugin:Receive:Value:Float32``` Registers a Message parameter that will be read
+* ```OSC_Plugin:Receive:Value:Float32``` Registers a message parameter that will be read
   * In ```Init``` Registers the value with the connected ```Receive:Message``` or via ```Receive:Value:*```
   * Out ```InitNext``` connect the next ```Receive:Value:*``` of this message (the order is important)
   * Out ```Value``` outputs the value if received 
@@ -65,7 +65,7 @@ Receiving Data (UDP Server)
 Sending Data (UDP Client)
 -------------------------
 * ```OSC_Plugin:Send:Packet``` Register a packet that can be sent (define at least one Bundle if you have more then one message)
-  * In ```Init``` registers the packet in  the connected ``Connection```
+  * In ```Init``` registers the packet in  the connected ```Connection```
   * In ```Send``` triggers a manual send on this packets content
   * In ```bAutoSend``` Activate automatic sending on value change inside this packet
   * Out ```InitNext``` connect the first ```Send:Bundle``` or ```Send:Message``` that is inside this packet
@@ -83,7 +83,7 @@ Sending Data (UDP Client)
   * In ```sMessage``` Messagetext/identifier/path
   * Out ```InitNext``` connect the first ```Send:Value``` of this message
 
-* ```OSC_Plugin:Send:Value:Float32```
+* ```OSC_Plugin:Send:Value:Float32```  Registers a message parameter that will be sent
   * In ```Init``` receive the value from ```Send:Message```
   * In ```Value``` if triggered with a new value it will send the packet if auto send is active, if not then it will save the value and it will get sent when ```Send:Packet```->```Send``` is triggered.
   * Out ```InitNext``` connect the next ```Send:Value:*```, ```Send:Message``` or ```Send:Bundle*```  of this packet (the order is important)
