@@ -29,8 +29,6 @@ Flownodes
 Please note there can be only one connection node for each IP and port. Use the signaler
 plugin to reuse connections in different flowgraphs.
 
-Details on Usage and Howto video will follow.
-
 Connection
 ----------
 * ```OSC_Plugin:Connection``` Connection data source or destination
@@ -43,12 +41,12 @@ Connection
 
 Receiving Data (UDP Server)
 ---------------------------
-* ```OSC_Plugin:Receive:Message```
-  * In ```Init``` Registers the message with the connected ```OSC_Plugin:Connection```
+* ```OSC_Plugin:Receive:Message``` Registers a Message that can be received
+  * In ```Init``` Registers the message with the connected ```Connection```
   * In ```sMessage``` Messagetext/identifier/path
   * Out ```InitNext``` connect the first ```Receive:Value:*``` of this message (the order is important)
 
-* ```OSC_Plugin:Receive:Value:Float32```
+* ```OSC_Plugin:Receive:Value:Float32``` Registers a Message parameter that will be read
   * In ```Init``` Registers the value with the connected ```Receive:Message``` or via ```Receive:Value:*```
   * Out ```InitNext``` connect the next ```Receive:Value:*``` of this message (the order is important)
   * Out ```Value``` outputs the value if received 
@@ -66,14 +64,29 @@ Receiving Data (UDP Server)
 
 Sending Data (UDP Client)
 -------------------------
-* ```OSC_Plugin:Send:Packet```
+* ```OSC_Plugin:Send:Packet``` Register a packet that can be sent (define at least one Bundle if you have more then one message)
+  * In ```Init``` registers the packet in  the connected ``Connection```
+  * In ```Send``` triggers a manual send on this packets content
+  * In ```bAutoSend``` Activate automatic sending on value change inside this packet
+  * Out ```InitNext``` connect the first ```Send:Bundle``` or ```Send:Message``` that is inside this packet
 
-* ```OSC_Plugin:Send:Message```
+* ```OSC_Plugin:Send:BundleStart``` Start a Bundle inside a packet (Bundles can be nested)
+  * In ```Init``` Start a new Bundle inside the packet/bundle
+  * Out ```InitNext``` connect the next ```Send:Value:*```, ```Send:Message``` or ```Send:Bundle*```  of this packet (the order is important)
 
-* ```OSC_Plugin:Send:BundleStart```
-* ```OSC_Plugin:Send:BundleEnd```
+* ```OSC_Plugin:Send:BundleEnd``` End the Bundle
+  * In ```Init``` End the current Bundle inside the packet/bundle
+  * Out ```InitNext``` connect the next ```Send:Value:*```, ```Send:Message``` or ```Send:Bundle*```  of this packet (the order is important)
+
+* ```OSC_Plugin:Send:Message``` Register a message in a packet
+  * In ```Init``` registers the message in  the connected ```Send:Packet```, ```Send:Bundle``` or via ```Send:Value:*```
+  * In ```sMessage``` Messagetext/identifier/path
+  * Out ```InitNext``` connect the first ```Send:Value``` of this message
 
 * ```OSC_Plugin:Send:Value:Float32```
+  * In ```Init``` receive the value from ```Send:Message```
+  * In ```Value``` if triggered with a new value it will send the packet if auto send is active, if not then it will save the value and it will get sent when ```Send:Packet```->```Send``` is triggered.
+  * Out ```InitNext``` connect the next ```Send:Value:*```, ```Send:Message``` or ```Send:Bundle*```  of this packet (the order is important)
 
 * ```OSC_Plugin:Send:Value:Int32``` same as Float32
 * ```OSC_Plugin:Send:Value:Int64``` same as Float32
