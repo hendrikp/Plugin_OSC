@@ -24,6 +24,10 @@ Extract the files to your Cryengine SDK Folder so that the Code and BinXX/Plugin
 
 The plugin manager will automatically load up the plugin when the game/editor is restarted or if you directly load it.
 
+Tutorial Video
+==============
+* [Connecting CryEngine with Smartphone and Sound Programs](http://www.youtube.com/watch?v=I7rWbfCllt8)
+
 Flownodes
 =========
 Please note there can be only one connection node for each IP and port. Use the signaler
