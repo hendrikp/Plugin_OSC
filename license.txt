@@ -1,5 +1,5 @@
 OSC Plugin
-==================================================================================
+========
 Copyright (c) 2012, The authors of the OSC Plugin project
 All rights reserved.
 
@@ -26,7 +26,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 [This is the BSD 2-Clause License, http://opensource.org/licenses/BSD-2-Clause]
 
 oscpkt
-==================================================================================
+=====
 Copyright (C) 2010  Julien Pommier
 
   This software is provided 'as-is', without any express or implied

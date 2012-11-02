@@ -1,5 +1,5 @@
-OSC Plugin for CryEngine SDK
-============================
+OSC Plugin for CryEngine
+========================
 OSC - [Open Sound Control](http://opensoundcontrol.org) protocol integration for CryEngine
 
 This plugin relies on [oscpkt](http://gruntthepeon.free.fr/oscpkt) a very lightweight OSC implementation.
