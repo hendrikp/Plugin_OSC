@@ -16,11 +16,34 @@
     <Filter Include="Flownodes">
       <UniqueIdentifier>{282d0f66-4033-4915-b85c-1fe87faa1560}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{25dbd88d-02ca-456a-8f03-a71d6bbcf97d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Installer">
+      <UniqueIdentifier>{c5ba7b1f-7c50-4018-b249-596142e440b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\readme.md" />
     <None Include="..\license.txt" />
     <None Include="..\authors.txt" />
+    <None Include="..\tools\build.bat">
+      <Filter>Tools</Filter>
+    </None>
+    <None Include="..\tools\codestyle.astylerc">
+      <Filter>Tools</Filter>
+    </None>
+    <None Include="..\tools\stylecode.bat">
+      <Filter>Tools</Filter>
+    </None>
+    <None Include="..\tools\OSC_Installer.nsi">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\tools\build_installer.bat">
+      <Filter>Installer</Filter>
+    </None>
+    <None Include="..\changelog.md" />
+    <None Include="..\latestredist.info" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\StdAfx.cpp">
