@@ -605,13 +605,13 @@ WrongType:
                     InputPortConfig<string>( "sHost", "localhost", _HELP( "host/ip to bind/connect" ), "sHost", _UICONFIG( "" ) ),
                     InputPortConfig<int>( "nPort", 7777, _HELP( "port to listen/connect" ), "nPort", _UICONFIG( "" ) ),
                     InputPortConfig<int>( "nType", int( CT_Default ), _HELP( "type" ), "nType", _UICONFIG( "enum_int:UDP-Client=0,UDP-Server=1" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitAllRMessageOrSPacket", _HELP( "for initialization of all send packets and receive messages" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -695,13 +695,13 @@ WrongType:
                 static const SInputPortConfig inputs[] =
                 {
                     InputPortConfig<Vec3>( "InitFromRMessageOrRValue", _HELP( "Initialize" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextRValue", _HELP( "for initialization of next receive value" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -775,14 +775,14 @@ WrongType:
                 static const SInputPortConfig inputs[] =
                 {
                     InputPortConfig<Vec3>( "InitFromRMessageOrRValue", _HELP( "Initialize" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextRValue", _HELP( "for initialization of next receive value" ) ),
                     OutputPortConfig<T1>( "Value", _HELP( "value" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -855,13 +855,13 @@ WrongType:
                 {
                     InputPortConfig<Vec3>( "InitFromConnection", _HELP( "Initialize" ) ),
                     InputPortConfig<string>( "sMessage", "/", _HELP( "Message" ), "sMessage", _UICONFIG( "" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextRValue", _HELP( "for initialization of first receive value" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -928,13 +928,13 @@ WrongType:
                     InputPortConfig<Vec3>( "InitFromConnection", _HELP( "Initialize" ) ),
                     InputPortConfig_Void( "Send", _HELP( "Send" ) ),
                     InputPortConfig<bool>( "bAutoSend", true, _HELP( "Activate automatic sending on value change inside this packet" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextSMessageOrSBundle", _HELP( "for initialization of first bundle/message." ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -1011,13 +1011,13 @@ WrongType:
                 {
                     InputPortConfig<Vec3>( "InitFromSBundleOrSPacketOrSValue", _HELP( "Initialize" ) ),
                     InputPortConfig<string>( "sMessage", "/", _HELP( "Message" ), "sMessage", _UICONFIG( "" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextSValueOrSBundle", _HELP( "for initialization of next send value or bundle" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -1084,13 +1084,13 @@ WrongType:
                 {
                     InputPortConfig<Vec3>( "InitFromSMessageOrSValue", _HELP( "Initialize" ) ),
                     InputPortConfig<T1>( "Value", _HELP( "value" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextSValueOrSMessageOrSBundle", _HELP( "for initialization of next send value or message or bundle" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -1175,13 +1175,13 @@ WrongType:
                 static const SInputPortConfig inputs[] =
                 {
                     InputPortConfig<Vec3>( "InitFromSPacketOrSValueOrSBundle", _HELP( "Initialize" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextSValueOrSMessageOrSBundle", _HELP( "for initialization of next send message or bundle" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
@@ -1244,13 +1244,13 @@ WrongType:
                 static const SInputPortConfig inputs[] =
                 {
                     InputPortConfig<Vec3>( "InitFromSPacketOrSValueOrSBundle", _HELP( "Initialize" ) ),
-                    {0},
+                    InputPortConfig_Null(),
                 };
 
                 static const SOutputPortConfig outputs[] =
                 {
                     OutputPortConfig<Vec3>( "InitNextSValueOrSMessageOrSBundle", _HELP( "for initialization of next send message or bundle" ) ),
-                    {0},
+                    OutputPortConfig_Null(),
                 };
 
                 config.pInputPorts = inputs;
