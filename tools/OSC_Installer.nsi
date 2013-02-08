@@ -6,7 +6,7 @@
 ##################################
 XPStyle on
 
-!define VERSION "1.1.0.0"
+!define VERSION "1.2.0.0"
 Name "OSC Plugin ${VERSION} for CryEngine"
 
 ; The file to write
@@ -87,7 +87,7 @@ SectionEnd
 
 ; Set Fileinfos
 VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductName" "OSC Plugin"
-VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "Copyright (c) 2012, The authors of the OSC Plugin project"
+VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "Copyright (c) 2013, The authors of the OSC Plugin project"
 VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "OSC Plugin for CryEngine"
 VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "${VERSION}"
 VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductVersion" "${VERSION}"
