@@ -15,7 +15,7 @@ Useful Stuff
 ------------
 * [Touch-OSC](http://hexler.net/software/touchosc) for iOS/Android (connect CryEngine with your phone)
 * [OSC-Datamonitor](http://www.kasperkamperman.com/blog/osc-datamonitor) monitors the OSC datastream (find out the data types and message names)
-* [OSCeleton for OpenNI](https://github.com/Sensebloom/OSCeleton) [OSCeleton for KinectSDK](https://github.com/Zillode/OSCeleton-KinectSDK) for Kinect skeleton data
+* [OSCeleton for OpenNI](https://github.com/Sensebloom/OSCeleton) or [OSCeleton for KinectSDK](https://github.com/Zillode/OSCeleton-KinectSDK) for Kinect skeleton data
 * [Duration](http://www.duration.cc) Duration is a timeline for creative coding. Create live performances, interactive installations, and music visualizations by synchronously composing servos, lighting, and projection.
 * [many more...](http://en.wikipedia.org/wiki/Open_Sound_Control#Implementations)
 
