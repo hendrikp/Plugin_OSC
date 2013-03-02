@@ -1,6 +1,6 @@
 OSC Plugin
 ========
-Copyright (c) 2012, The authors of the OSC Plugin project
+Copyright (c) 2013, The authors of the OSC Plugin project
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
