@@ -31,8 +31,7 @@ Tutorial Video
 
 Flownodes
 =========
-Please note there can be only one connection node for each IP and port. Use the signaler
-plugin to reuse connections in different flowgraphs.
+Please note there can be only one connection node for each IP and port. Use the VariousStuff ValueChannel to reuse connections in different flowgraphs.
 
 Connection
 ----------
