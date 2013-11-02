@@ -2,12 +2,12 @@
 
 #pragma once
 
+#include <IPluginBase.h>
 #include <Game.h>
 
 #include <IPluginManager.h>
-#include <IPluginBase.h>
-#include <CPluginBase.hpp>
 
+#include <CPluginBase.hpp>
 #include <IPluginOSC.h>
 
 #define PLUGIN_NAME "OSC"
@@ -38,7 +38,7 @@ namespace OSCPlugin
 
             const char* GetVersion() const
             {
-                return "1.2.1.0";
+                return "1.2.2.0";
             };
 
             const char* GetName() const

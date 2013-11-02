@@ -1,6 +1,7 @@
 /* OSC_Plugin - for licensing and copyright see license.txt */
 
 #include <StdAfx.h>
+#include <CPluginOSC.h>
 #include <Nodes/G2FlowBaseNode.h>
 
 #include <oscpkt/oscpkt.hh>
@@ -8,8 +9,6 @@
 
 #include <list>
 #include <map>
-
-#include <CPluginOSC.h>
 
 using namespace oscpkt;
 
