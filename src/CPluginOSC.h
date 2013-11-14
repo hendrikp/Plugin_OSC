@@ -67,7 +67,7 @@ namespace OSCPlugin
 
             void* GetConcreteInterface( const char* sInterfaceVersion )
             {
-                return static_cast < IPluginOSC* > ( this );
+                return static_cast <IPluginOSC*>( this );
             };
 
             // IPluginOSC

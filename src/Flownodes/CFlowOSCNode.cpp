@@ -16,7 +16,7 @@ namespace OSCPlugin
 {
     class COSCConnection;
 
-    std::map<int, COSCConnection* > g_OSCConnections;
+    std::map<int, COSCConnection*> g_OSCConnections;
     int g_nFreeConnection = 1;
 
     COSCConnection& GetConnection( int nConnection )
