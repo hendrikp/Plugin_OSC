@@ -1,4 +1,4 @@
-OSC Plugin 1.2.2.0 (18.11.2013)
+OSC Plugin 1.2.2.0 (29.11.2013)
 ---------------------------
 Stable Release for CryEngine 3.5.4 (32/64 bit)
 
